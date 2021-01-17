@@ -1,0 +1,48 @@
+
+> fsevents@1.2.13 install /Users/motak/FE evaluation/mid1/indexedbapp/node_modules/watchpack-chokidar2/node_modules/fsevents
+> node install.js
+
+  SOLINK_MODULE(target) Release/.node
+  CXX(target) Release/obj.target/fse/fsevents.o
+  SOLINK_MODULE(target) Release/fse.node
+
+> fsevents@1.2.13 install /Users/motak/FE evaluation/mid1/indexedbapp/node_modules/webpack-dev-server/node_modules/fsevents
+> node install.js
+
+  SOLINK_MODULE(target) Release/.node
+  CXX(target) Release/obj.target/fse/fsevents.o
+  SOLINK_MODULE(target) Release/fse.node
+
+> core-js@2.6.12 postinstall /Users/motak/FE evaluation/mid1/indexedbapp/node_modules/babel-runtime/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> core-js@3.8.2 postinstall /Users/motak/FE evaluation/mid1/indexedbapp/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> core-js-pure@3.8.2 postinstall /Users/motak/FE evaluation/mid1/indexedbapp/node_modules/core-js-pure
+> node -e "try{require('./postinstall')}catch(e){}"
+
+
+> ejs@2.7.4 postinstall /Users/motak/FE evaluation/mid1/indexedbapp/node_modules/ejs
+> node ./postinstall.js
+
+Thank you for installing [35mEJS[0m: built with the [32mJake[0m JavaScript build tool ([32mhttps://jakejs.com/[0m)
+
++ dexie@3.0.3
+added 312 packages from 91 contributors, removed 232 packages, updated 1467 packages and audited 1786 packages in 87.387s
+
+124 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+

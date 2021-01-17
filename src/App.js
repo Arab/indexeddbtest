@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useLiveQuery } from "dexie-react-hooks";
+import { db, resetDatabase } from "./db/db";
+
+import Recipe from "./Components/Recipe";
+import AddRecipe from "./Components/AddRecipe";
+
+import "./App.css";
 
 function App() {
+  const recipes = useLiveQuery(() => db.recipes.toArray());
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {recipes ? (
+        recipes.map((recipe) => <Recipe key={recipe.id} recipe={recipe} />)
+      ) : (
+        <div>No Recipes add some</div>
+      )}
+      <AddRecipe />
+      <button
+        onClick={() => {
+          resetDatabase();
+        }}
+      >
+        Reset Database
+      </button>
     </div>
   );
 }
