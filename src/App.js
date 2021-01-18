@@ -1,5 +1,5 @@
-import { useLiveQuery } from "dexie-react-hooks";
-import { db, resetDatabase } from "./db/db";
+import { resetDatabase } from "./db/db";
+import useSortedRecipes from "./db/useSortedRecipes";
 
 import Recipe from "./Components/Recipe";
 import AddRecipe from "./Components/AddRecipe";
@@ -7,17 +7,20 @@ import AddRecipe from "./Components/AddRecipe";
 import "./App.css";
 
 function App() {
-  const recipes = useLiveQuery(() => db.recipes.toArray());
+  const [sortedRecipes] = useSortedRecipes();
 
   return (
-    <div className="App">
-      {recipes ? (
-        recipes.map((recipe) => <Recipe key={recipe.id} recipe={recipe} />)
+    <div className="recipes">
+      {sortedRecipes ? (
+        sortedRecipes.map((recipe) => (
+          <Recipe key={recipe.id} recipe={recipe} />
+        ))
       ) : (
-        <div>No Recipes add some</div>
+        <div className="recipes--empty">No Recipes add some</div>
       )}
       <AddRecipe />
       <button
+        className="reset-database"
         onClick={() => {
           resetDatabase();
         }}

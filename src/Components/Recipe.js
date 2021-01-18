@@ -11,8 +11,8 @@ const Recipe = ({ recipe }) => {
   );
 
   return (
-    <div>
-      <header>
+    <div className="recipe">
+      <header className="recipe__title">
         <span>{recipe.recipeName} </span>
         <span>
           {products &&

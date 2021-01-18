@@ -58,10 +58,9 @@ const AddProduct = ({ recipe }) => {
 
         <label>
           Weight Symbol:
-          <input
-            type="text"
-            autoFocus
+          <select
             placeholder="Enter weight symbol..."
+            autoFocus
             value={product.weightSymbol}
             onChange={(e) =>
               setProduct((product) => ({
@@ -69,7 +68,12 @@ const AddProduct = ({ recipe }) => {
                 weightSymbol: e.target.value,
               }))
             }
-          />
+          >
+            <option value="g">g</option>
+            <option value="mg">mg</option>
+            <option value="dag">dag</option>
+            <option value="kg">kg</option>
+          </select>
         </label>
 
         <label>
